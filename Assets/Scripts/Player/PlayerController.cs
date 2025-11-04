@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 	private PlayerNormalRotate _normalRotate;
 	private PlayerWeaponRotate _weaponRotate;
 
-
+	private GameObject weapon;
 	[SerializeField] private bool _isWeaponMode = false;
 
 	void Awake()
@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
 		_normalRotate = GetComponent<PlayerNormalRotate>();
 		_weaponRotate = GetComponent<PlayerWeaponRotate>();
+
+		weapon = GameObject.FindGameObjectWithTag("Weapon");
 
 	}
 
@@ -74,6 +76,9 @@ public class PlayerController : MonoBehaviour
 			_normalRotate.enabled = !_isWeaponMode;
 			
 		if (_weaponRotate != null)
+        {
+			weapon.SetActive(_isWeaponMode);
 			_weaponRotate.enabled = _isWeaponMode;
+        }
 	}
 }

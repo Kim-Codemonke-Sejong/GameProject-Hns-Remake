@@ -15,11 +15,13 @@ namespace Hns.Spawn {
 
         void Awake()
         {
-            spawnPoints = GameObject.FindGameObjectsWithTag( "SpawnPoint" )
-                        .Select( go => go.GetComponent<SpawnPoint>() )
-                        .Where( sp => sp != null )
+            spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint")
+                        .Select(go => go.GetComponent<SpawnPoint>())
+                        .Where(sp => sp != null)
                         .Distinct()
                         .ToArray();
+
+            StartSpawning();
         }
 
         public void StartSpawning()

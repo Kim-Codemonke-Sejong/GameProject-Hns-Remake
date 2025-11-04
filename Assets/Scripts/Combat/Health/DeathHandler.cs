@@ -29,9 +29,7 @@ public class DeathHandler : MonoBehaviour
     {
         // 죽음 이펙트 생성
         if (deathEffectPrefab != null)
-        {
             Instantiate(deathEffectPrefab, transform.position, transform.rotation);
-        }
         
         // 오브젝트 제거
         if (destroyDelay > 0f)

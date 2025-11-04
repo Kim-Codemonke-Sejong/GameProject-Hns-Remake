@@ -11,6 +11,7 @@ namespace HnS.Health
         public event Action<float, float> OnHealthChanged; //current / max
         public event Action<DamageInfo> OnDamageTaken;
         public event Action OnDeath;
+        [SerializeField] private GameObject hitEffectPrefab;
 
         [field: SerializeField] public float CurrentHealth { get; private set; }
         public float MaxHealth { get { return maxHealth; } }
@@ -45,6 +46,10 @@ namespace HnS.Health
                 CurrentHealth = 0f;
                 Die();
             }
+
+            if (hitEffectPrefab != null)
+                Instantiate(hitEffectPrefab, transform.position, transform.rotation);
+            
 
             OnDamageTaken?.Invoke(damageInfo);
             OnHealthChanged?.Invoke(CurrentHealth, maxHealth);

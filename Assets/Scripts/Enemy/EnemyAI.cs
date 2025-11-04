@@ -13,7 +13,7 @@ namespace HnSRogue.Enemy
         [Header("Enemy Settings")]
         public float detectionRange = 10f;
         public float attackRange = 2f;
-        public float moveSpeed = 3f;
+        public float moveSpeed = 1f;
         public float attackDamage = 10f;
         public float attackCooldown = 2f;
 
