@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class ExpSystem : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int lootExpAmount;
+    public gameObject expOBJ;
+
+    private void Update()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DropExp()
     {
-        
+
     }
+    private void GetExp()
+    {
+
+    }
+    
 }

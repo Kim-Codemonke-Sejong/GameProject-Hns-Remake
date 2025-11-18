@@ -88,9 +88,6 @@ namespace HnSRogue.Enemy
             }
         }
 
-        /// <summary>
-        /// 행동 수행
-        /// </summary>
         private void PerformAction()
         {
             switch (currentState)
@@ -107,9 +104,6 @@ namespace HnSRogue.Enemy
             }
         }
 
-        /// <summary>
-        /// 플레이어 추적
-        /// </summary>
         private void ChasePlayer()
         {
             Vector3 direction = (player.position - transform.position).normalized;
@@ -119,9 +113,6 @@ namespace HnSRogue.Enemy
             transform.rotation = Quaternion.LookRotation(direction);
         }
 
-        /// <summary>
-        /// 플레이어 공격
-        /// </summary>
         private void AttackPlayer()
         {
             if (Time.time - lastAttackTime < attackCooldown)
@@ -130,7 +121,6 @@ namespace HnSRogue.Enemy
             if (player == null)
                 return;
 
-            // 플레이어에게 데미지
             HealthSystem playerHealth = player.GetComponent<HealthSystem>();
             if (playerHealth != null)
             {
@@ -146,9 +136,6 @@ namespace HnSRogue.Enemy
             Debug.Log($"[EnemyAI] {gameObject.name} 공격!");
         }
 
-        /// <summary>
-        /// IDamageable 인터페이스 구현
-        /// </summary>
         public void TakeDamage(DamageInfo damageInfo)
         {
             if (healthSystem != null && !healthSystem.IsDead())
@@ -162,16 +149,11 @@ namespace HnSRogue.Enemy
             return healthSystem != null && healthSystem.IsDead();
         }
 
-        /// <summary>
-        /// 디버그용 Gizmos
-        /// </summary>
         private void OnDrawGizmos()
         {
-            // 감지 범위
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, detectionRange);
 
-            // 공격 범위
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
