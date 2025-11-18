@@ -3,7 +3,7 @@ using UnityEngine;
 public class CoinSystem : MonoBehaviour
 {
     public int lootCoinAmount;
-    public gameObject coinOBJ;
+    //public gameObject coinOBJ;
 
     private void Awake()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ExpSystem : MonoBehaviour
 {
     public int lootExpAmount;
-    public gameObject expOBJ;
+    //public gameObject expOBJ;
 
     private void Update()
     {

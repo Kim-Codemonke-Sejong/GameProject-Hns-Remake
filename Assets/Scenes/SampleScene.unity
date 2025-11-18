@@ -470,8 +470,8 @@ MonoBehaviour:
   damageInterval: 0.5
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
-  hitboxChildName: WeaponHitbox
+    m_Bits: 4294967295
+  hitboxChildName: 
   autoFindHitbox: 1
 --- !u!64 &725626747
 MeshCollider:
@@ -488,11 +488,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &725626748
