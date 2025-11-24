@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fee8ca57e009662469d3074bb865ca63
+timeCreated: 1429962485
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 35512
+  packageName: Cartoonish Fantasy Melee Weapon Minipack
+  packageVersion: 1.0
+  assetPath: Assets/nnj3de_CartoonFantasyWeaponMinipack/models/Materials/machete_mobile.mat
+  uploadId: 62158
